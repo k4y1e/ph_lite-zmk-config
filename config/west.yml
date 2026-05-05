@@ -15,4 +15,20 @@ manifest:
       import: app/west.yml
   self:
     path: config
-
+ manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: brokenax3
+      url-base: https://github.com/brokenax3/zmk-behavior-socd
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    # Add the SOCD module:
+    - name: zmk-behavior-socd
+      remote: brokenax3
+      revision: main
+  self:
+    path: config
