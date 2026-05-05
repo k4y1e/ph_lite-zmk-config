@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <behaviors/socd_wasd.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -54,6 +55,10 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            bindings = <
+                &kp Q       &socd_ws 0  &kp E       &kp R       ...
+                &socd_ad 0  &socd_ws 1  &socd_ad 1  &kp F       ...
+            >;
             display-name = "Base";
             bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8    &kp N9  &kp N0    &kp MINUS &kp EQUAL     &kp BSPC
